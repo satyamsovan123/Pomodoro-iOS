@@ -1,24 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainScreenBackdrop" translatesAutoresizingMaskIntoConstraints="NO" id="cSe-0x-T0e">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainScreenShapes" translatesAutoresizingMaskIntoConstraints="NO" id="g3d-cf-hDa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="120" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvK-Jd-ChW" userLabel="TotalStackView">
+                                <rect key="frame" x="0.0" y="217.5" width="414" height="461.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="60" translatesAutoresizingMaskIntoConstraints="NO" id="WHN-20-dsT">
+                                        <rect key="frame" x="40" y="0.0" width="334" height="143.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="120"/>
+                                        <color key="textColor" red="0.31764705879999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                                        </variation>
+                                    </label>
+                                    <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="UN9-vd-d9U">
+                                        <rect key="frame" x="80" y="174.5" width="254" height="5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="4" id="Gql-s9-slF"/>
+                                        </constraints>
+                                        <color key="progressTintColor" red="0.31764705879999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="trackTintColor" red="0.95686274510000002" green="0.59999999999999998" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can do this all day!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNK-JG-MSz">
+                                        <rect key="frame" x="33" y="187.5" width="348" height="119.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
+                                        <color key="textColor" red="0.31764705879999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                        </variation>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="FBe-Ju-Ncq" userLabel="ControlStackView">
+                                        <rect key="frame" x="78" y="357.5" width="258" height="104"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NV-Dn-Bu0">
+                                                <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
+                                                <state key="normal" title="Play/Pause" backgroundImage="Play">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playPausePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3vy-cn-lkg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nZ-AO-kxI">
+                                                <rect key="frame" x="154" y="0.0" width="104" height="104"/>
+                                                <state key="normal" title="Stop" backgroundImage="Stop">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="stopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gMO-C7-GgC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UN9-vd-d9U" firstAttribute="leading" secondItem="FBe-Ju-Ncq" secondAttribute="leading" constant="2" id="IFr-zH-HJP"/>
+                                    <constraint firstItem="UN9-vd-d9U" firstAttribute="centerX" secondItem="FBe-Ju-Ncq" secondAttribute="centerX" id="LPJ-V8-gLJ"/>
+                                    <constraint firstItem="FBe-Ju-Ncq" firstAttribute="trailing" secondItem="UN9-vd-d9U" secondAttribute="trailing" constant="2" id="hCL-aA-lHV"/>
+                                </constraints>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="70"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cSe-0x-T0e" secondAttribute="bottom" id="2rP-aM-b50"/>
+                            <constraint firstItem="zvK-Jd-ChW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4b0-3b-3rl"/>
+                            <constraint firstItem="g3d-cf-hDa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9xA-Ia-CC1"/>
+                            <constraint firstItem="g3d-cf-hDa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ATe-JO-6zK"/>
+                            <constraint firstAttribute="trailing" secondItem="cSe-0x-T0e" secondAttribute="trailing" id="HoC-C3-2MF"/>
+                            <constraint firstAttribute="bottom" secondItem="g3d-cf-hDa" secondAttribute="bottom" id="Nrt-XX-c2g"/>
+                            <constraint firstItem="zvK-Jd-ChW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ksT-Xb-L1y"/>
+                            <constraint firstItem="zvK-Jd-ChW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kxC-7W-Jll"/>
+                            <constraint firstItem="cSe-0x-T0e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="myX-SW-n7o"/>
+                            <constraint firstAttribute="trailing" secondItem="zvK-Jd-ChW" secondAttribute="trailing" id="q07-J4-rQZ"/>
+                            <constraint firstItem="cSe-0x-T0e" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ryO-bV-Bp8"/>
+                            <constraint firstAttribute="trailing" secondItem="g3d-cf-hDa" secondAttribute="trailing" id="zmJ-z3-J2K"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playPauseButton" destination="1NV-Dn-Bu0" id="tlh-Au-e7V"/>
+                        <outlet property="progressView" destination="UN9-vd-d9U" id="TXS-Lq-EKu"/>
+                        <outlet property="quoteLabel" destination="iNK-JG-MSz" id="bYC-hq-lXl"/>
+                        <outlet property="stopButton" destination="3nZ-AO-kxI" id="5yX-th-9EX"/>
+                        <outlet property="timeLabel" destination="WHN-20-dsT" id="yFa-JB-tgV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MainScreenBackdrop" width="341" height="341"/>
+        <image name="MainScreenShapes" width="341" height="359"/>
+        <image name="Play" width="104" height="104"/>
+        <image name="Stop" width="104" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90C7C5326A1B61800FBCF31 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E90C7C5226A1B61800FBCF31 /* sound.mp3 */; };
 		E92965F626A07BD800B5C3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92965F526A07BD800B5C3F8 /* AppDelegate.swift */; };
 		E92965F826A07BD800B5C3F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92965F726A07BD800B5C3F8 /* SceneDelegate.swift */; };
 		E92965FA26A07BD800B5C3F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92965F926A07BD800B5C3F8 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E90C7C5226A1B61800FBCF31 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 		E92965F226A07BD800B5C3F8 /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92965F526A07BD800B5C3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E92965F726A07BD800B5C3F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				E92965FE26A07BDD00B5C3F8 /* Assets.xcassets */,
 				E929660026A07BDD00B5C3F8 /* LaunchScreen.storyboard */,
 				E929660326A07BDD00B5C3F8 /* Info.plist */,
+				E90C7C5226A1B61800FBCF31 /* sound.mp3 */,
 			);
 			path = Pomodoro;
 			sourceTree = "<group>";
@@ -124,6 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90C7C5326A1B61800FBCF31 /* sound.mp3 in Resources */,
 				E929660226A07BDD00B5C3F8 /* LaunchScreen.storyboard in Resources */,
 				E92965FF26A07BDD00B5C3F8 /* Assets.xcassets in Resources */,
 				E92965FD26A07BD800B5C3F8 /* Main.storyboard in Resources */,
@@ -296,7 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.satyamsovan.Pomodoro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +319,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.satyamsovan.Pomodoro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

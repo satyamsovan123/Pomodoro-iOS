@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,15 +13,66 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreenBackdrop" translatesAutoresizingMaskIntoConstraints="NO" id="Yku-Sw-KjI">
+                                <rect key="frame" x="0.0" y="-5" width="414" height="906"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreenTimer" translatesAutoresizingMaskIntoConstraints="NO" id="nro-fe-DLf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="hZu-rE-yD8">
+                                <rect key="frame" x="17" y="303" width="380" height="290"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreenLogo" translatesAutoresizingMaskIntoConstraints="NO" id="D5r-lA-aw3">
+                                        <rect key="frame" x="65" y="0.0" width="250" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="bqg-8T-by8"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="fHU-mH-dK9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pomodoro Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="wDO-YK-2UG">
+                                        <rect key="frame" x="0.0" y="230" width="380" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <color key="textColor" red="0.31764705882352939" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nro-fe-DLf" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="0EM-9f-dqn"/>
+                            <constraint firstItem="Yku-Sw-KjI" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-5" id="4gh-pK-gli"/>
+                            <constraint firstItem="nro-fe-DLf" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="9Ur-q7-pul"/>
+                            <constraint firstAttribute="bottom" secondItem="Yku-Sw-KjI" secondAttribute="bottom" constant="-5" id="Aaz-wY-Swn"/>
+                            <constraint firstItem="hZu-rE-yD8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="AoH-fd-fIO"/>
+                            <constraint firstItem="Yku-Sw-KjI" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="DZe-h8-lgd"/>
+                            <constraint firstItem="hZu-rE-yD8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Eko-ph-B8g"/>
+                            <constraint firstItem="hZu-rE-yD8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="GnG-Sh-KBi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hZu-rE-yD8" secondAttribute="trailing" constant="17" id="IW7-dq-wVT"/>
+                            <constraint firstAttribute="trailing" secondItem="nro-fe-DLf" secondAttribute="trailing" id="MLG-iy-wJC"/>
+                            <constraint firstAttribute="trailing" secondItem="Yku-Sw-KjI" secondAttribute="trailing" id="mGf-gy-TlS"/>
+                            <constraint firstAttribute="bottom" secondItem="nro-fe-DLf" secondAttribute="bottom" id="raZ-NY-cbX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.33035714285711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SplashScreenBackdrop" width="341.5" height="341.5"/>
+        <image name="SplashScreenLogo" width="397" height="380"/>
+        <image name="SplashScreenTimer" width="343.5" height="368"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
